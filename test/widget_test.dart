@@ -6,9 +6,9 @@
 // tree, read text, and verify that the values of widget properties are correct.
 
 import 'package:flutter_test/flutter_test.dart';
-
-import 'package:ulearning_flutter_riverpod/main.dart'; // Correct the path as needed
+import 'package:ulearning_flutter_riverpod/main.dart'; // Update with your correct path
 import 'package:ulearning_flutter_riverpod/global.dart';
+import 'firebase_test_setup.dart'; // Import the test setup file
 
 // void main() {
 //   testWidgets('Counter increments smoke test', (WidgetTester tester) async {
@@ -31,7 +31,8 @@ import 'package:ulearning_flutter_riverpod/global.dart';
 
 void main() {
   setUpAll(() async {
-    await Global.init();
+    await initializeFirebase(); // Initialize Firebase
+    await Global.init(); // Initialize other global services
   });
 
   testWidgets('MyWidget has a title and message', (WidgetTester tester) async {
