@@ -32,7 +32,7 @@ import 'shared_preferences_mock.dart'; // Import the test setup file
 
 void main() {
   setUpAll(() async {
-   setupSharedPreferencesMock(); // Initialize SharedPreferences mock
+    setupSharedPreferencesMock(); // Initialize SharedPreferences mock
     await initializeFirebase(); // Initialize Firebase
     await Global.init(); // Initialize other global services
   });
@@ -41,7 +41,11 @@ void main() {
     // Build our app and trigger a frame.
     await tester.pumpWidget(const MyApp());
 
+    // Wait for all the frames to settle.
+    await tester.pumpAndSettle();
+
     // Verify if the app contains a specific text.
     expect(find.text('Welcome'), findsOneWidget);
+    expect(find.text('Welcome to MyApp'), findsOneWidget);
   });
 }
