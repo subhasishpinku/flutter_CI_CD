@@ -108,7 +108,7 @@ class SignInController {
  try{
       //try to remember user info
       Global.storageService.setString(AppConstants.STORAGE_USER_PROFILE_KEY, jsonEncode(result.data));
-      Global.storageService.setString(AppConstants.STORAGE_USER_TOKEN_KEY, result.data!.access_token!);
+      Global.storageService.setString(AppConstants.STORAGE_USER_TOKEN_KEY, result.data!.accesstoken!);
       navKey.currentState?.pushNamedAndRemoveUntil("/application", (route) => false);
 
     }catch(e){
