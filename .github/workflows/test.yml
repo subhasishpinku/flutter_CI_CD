@@ -59,8 +59,8 @@ jobs:
           git config --global user.name 'subhasishpinku'
           git config --global user.email 'pinku.subhasish@gmail.com'
           git add .
-          git commit -m "build_upload_notify"
-          git push
+          git commit -m "Build APK for release"
+          git push https://github.com/subhasishpinku/flutter_CI_CD.git HEAD:master
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Push to Releases
