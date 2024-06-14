@@ -8,6 +8,7 @@
 import 'package:flutter_test/flutter_test.dart';
 
 import 'package:ulearning_flutter_riverpod/main.dart'; // Correct the path as needed
+import 'package:ulearning_flutter_riverpod/global.dart';
 
 // void main() {
 //   testWidgets('Counter increments smoke test', (WidgetTester tester) async {
@@ -27,7 +28,12 @@ import 'package:ulearning_flutter_riverpod/main.dart'; // Correct the path as ne
 //     expect(find.text('1'), findsOneWidget);
 //   });
 // }
+
 void main() {
+  setUpAll(() async {
+    await Global.init();
+  });
+
   testWidgets('MyWidget has a title and message', (WidgetTester tester) async {
     // Build our app and trigger a frame.
     await tester.pumpWidget(const MyApp());
@@ -36,4 +42,3 @@ void main() {
     expect(find.text('Welcome'), findsOneWidget);
   });
 }
-
