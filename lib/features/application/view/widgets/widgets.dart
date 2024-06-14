@@ -36,9 +36,7 @@ var bottomTabs = <BottomNavigationBarItem>[
 ];
 
 Widget _bottomContainer(
-    {double width = 15,
-    double height = 15,
-    String imagePath =ImageRes.home,
+    {String imagePath =ImageRes.home,
     Color color = AppColors.primaryFourthElementText}) {
   return SizedBox(
     width: 15.w,
