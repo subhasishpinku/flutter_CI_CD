@@ -8,7 +8,8 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:ulearning_flutter_riverpod/main.dart'; // Update with your correct path
 import 'package:ulearning_flutter_riverpod/global.dart';
-import 'firebase_test_setup.dart'; // Import the test setup file
+import 'firebase_test_setup.dart';
+import 'shared_preferences_mock.dart'; // Import the test setup file
 
 // void main() {
 //   testWidgets('Counter increments smoke test', (WidgetTester tester) async {
@@ -31,6 +32,7 @@ import 'firebase_test_setup.dart'; // Import the test setup file
 
 void main() {
   setUpAll(() async {
+   setupSharedPreferencesMock(); // Initialize SharedPreferences mock
     await initializeFirebase(); // Initialize Firebase
     await Global.init(); // Initialize other global services
   });
