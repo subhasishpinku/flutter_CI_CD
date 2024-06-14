@@ -11,7 +11,7 @@ import 'package:ulearning_flutter_riverpod/main.dart'; // Correct the path as ne
 
 void main() {
   testWidgets('MyWidget has a title and message', (WidgetTester tester) async {
-    await tester.pumpWidget(MyApp()); // Ensure MyApp is a valid class
+    await tester.pumpWidget(const MyApp()); // Ensure MyApp is a valid class
     // Your test code here
   });
 }
