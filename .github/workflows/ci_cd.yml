@@ -1,0 +1,32 @@
+name: build_upload_notify
+
+on:
+  push:
+    branches:
+      - master
+      - test
+
+jobs:
+  build_upload_notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v1
+
+      - name: Set up JDK 1.8
+        uses: actions/setup-java@v1
+        with:
+          java-version: 1.8
+
+      - name: Set up Flutter
+        uses: subosito/flutter-action@v1
+        with: 
+          channel: 'stable'
+
+      - name: Get Branch Name
+        id: branch
+        run: echo "branch=${GITHUB_REF##*/}" >> $GITHUB_ENV
+
+      - name: Get Today's Date
+        id: date
+        run: echo "date=$(date +'%Y-%m-%d')" >> $GITHUB_ENV
