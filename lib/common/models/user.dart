@@ -1,5 +1,3 @@
-// ignore_for_file: non_constant_identifier_names
-
 /*class UserProfile{
   String? name;
   int? age;
@@ -39,7 +37,7 @@ class LoginRequestEntity {
   String? email;
   String? phone;
   String? avatar;
-  String? open_id;
+  String? openid;
   int? online;
 
   LoginRequestEntity({
@@ -49,7 +47,7 @@ class LoginRequestEntity {
     this.email,
     this.phone,
     this.avatar,
-    this.open_id,
+    this.openid,
     this.online,
   });
 
@@ -60,7 +58,7 @@ class LoginRequestEntity {
     "email": email,
     "phone": phone,
     "avatar": avatar,
-    "open_id": open_id,
+    "open_id": openid,
     "online": online,
   };
 }

@@ -71,7 +71,7 @@ class SignInController {
         loginRequestEntity.avatar = photoUrl;
         loginRequestEntity.name = displayName;
         loginRequestEntity.email = email;
-        loginRequestEntity.open_id = id;
+        loginRequestEntity.openid = id;
         loginRequestEntity.type = 1;
         asyncPostAllData(loginRequestEntity);
         if (kDebugMode) {
