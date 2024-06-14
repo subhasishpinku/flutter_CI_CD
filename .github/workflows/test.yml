@@ -24,7 +24,7 @@ jobs:
       - name: Run analyze
         run: flutter analyze
       - name: Run test cases
-        run: flutter test
+        run: flutter test --no-pub
 
   build_appbundle:
     name: Flutter Release
