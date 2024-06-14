@@ -56,8 +56,8 @@ jobs:
         run: flutter build apk --debug --split-per-abi
       - name: Commit build artifacts
         run: |
-          git config --global user.name 'github-actions[bot]'
-          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git config --global user.name 'subhasishpinku'
+          git config --global user.email 'pinku.subhasish@gmail.com'
           git add .
           git commit -m "build_upload_notify"
           git push
