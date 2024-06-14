@@ -65,7 +65,7 @@ class MyHomePage extends ConsumerWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: Text("Riverpod app"),
+        title: const Text("Riverpod app"),
       ),
       body: Center(
         child: Column(
@@ -88,7 +88,7 @@ class MyHomePage extends ConsumerWidget {
             heroTag: "one",
             onPressed: () => navRoute(),
             tooltip: 'Increment',
-            child: Icon(Icons.arrow_right_rounded),
+            child: const Icon(Icons.arrow_right_rounded),
           ),
           const FloatingActionButton(
             heroTag: "one",
@@ -111,7 +111,7 @@ void navRoute() {
 }
 
 class SecondPage extends ConsumerWidget {
-  const SecondPage({Key? key}) : super(key: key);
+  const SecondPage({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -121,7 +121,7 @@ class SecondPage extends ConsumerWidget {
       body: Center(
         child: Text(
           "$count",
-          style: TextStyle(fontSize: 30),
+          style: const TextStyle(fontSize: 30),
         ),
       ),
     );

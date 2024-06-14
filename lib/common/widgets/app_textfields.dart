@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:ulearning_flutter_riverpod/common/widgets/text_widgets.dart';
-import 'package:ulearning_flutter_riverpod/features/sign_up/provider/register_notifier.dart';
-
 import 'app_shadow.dart';
 import 'image_widgets.dart';
 

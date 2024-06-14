@@ -14,7 +14,7 @@ import '../../../common/widgets/app_bar.dart';
 import '../../../common/widgets/app_textfields.dart';
 
 class SignIn extends ConsumerStatefulWidget {
-  const SignIn({Key? key}) : super(key: key);
+  const SignIn({super.key});
 
   @override
   ConsumerState<SignIn> createState() => _SignInState();
@@ -28,13 +28,12 @@ class _SignInState extends ConsumerState<SignIn> {
     //Future.delayed(Duration(seconds: 0), (){
       _controller = SignInController();
     //});
-    // TODO: implement didChangeDependencies
     super.didChangeDependencies();
   }
 
   @override
   Widget build(BuildContext context) {
-    final signInProvider = ref.watch(signInNotifierProvider);
+    // final signInProvider = ref.watch(signInNotifierProvider);
     final loader = ref.watch(appLoaderProvider);
 
     return Container(

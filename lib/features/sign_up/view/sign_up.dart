@@ -13,7 +13,7 @@ import '../../../common/widgets/app_bar.dart';
 import '../../../common/widgets/app_textfields.dart';
 
 class SignUp extends ConsumerStatefulWidget {
-  const SignUp({Key? key}) : super(key: key);
+  const SignUp({super.key});
 
   @override
   ConsumerState<SignUp> createState() => _SignUpState();
@@ -25,13 +25,12 @@ class _SignUpState extends ConsumerState<SignUp> {
   @override
   void initState() {
     _controller = SignUpController(ref: ref);
-    // TODO: implement initState
     super.initState();
   }
 
   @override
   Widget build(BuildContext context) {
-    final regProvider = ref.watch(registerNotifierProvider);
+    // final regProvider = ref.watch(registerNotifierProvider);
     //regProvider.
     final loader = ref.watch(appLoaderProvider);
 

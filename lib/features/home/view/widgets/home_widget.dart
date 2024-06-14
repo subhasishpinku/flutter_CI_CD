@@ -16,8 +16,7 @@ class HomeBanner extends StatelessWidget {
   final PageController controller;
   final WidgetRef ref;
 
-  const HomeBanner({Key? key, required this.controller, required this.ref})
-      : super(key: key);
+  const HomeBanner({super.key, required this.controller, required this.ref});
 
   @override
   Widget build(BuildContext context) {
@@ -73,7 +72,7 @@ Widget bannerContainer({required String imagePath}) {
 }
 
 class UserName extends StatelessWidget {
-  const UserName({Key? key}) : super(key: key);
+  const UserName({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -86,7 +85,7 @@ class UserName extends StatelessWidget {
 }
 
 class HelloText extends StatelessWidget {
-  const HelloText({Key? key}) : super(key: key);
+  const HelloText({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -124,7 +123,7 @@ AppBar homeAppBar(WidgetRef ref) {
 }
 
 class HomeMenuBar extends StatelessWidget {
-  const HomeMenuBar({Key? key}) : super(key: key);
+  const HomeMenuBar({super.key});
 
   @override
   Widget build(BuildContext context) {

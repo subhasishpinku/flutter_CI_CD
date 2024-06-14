@@ -15,14 +15,13 @@ class AppOnboardingPage extends StatelessWidget {
   final BuildContext context;
 
   const AppOnboardingPage(
-      {Key? key,
+      {super.key,
       required this.controller,
       required this.imagePath,
       required this.title,
       required this.subTitle,
       required this.index,
-      required this.context})
-      : super(key: key);
+      required this.context});
 
   @override
   Widget build(BuildContext context) {

@@ -12,7 +12,7 @@ import '../../../common/utils/image_res.dart';
 //final indexProvider = StateProvider<int>((ref)=>0);
 
 class Welcome extends ConsumerWidget {
-  Welcome({Key? key}) : super(key: key);
+  Welcome({super.key});
 
   final PageController _controller = PageController();
  // int dotsIndex=0;

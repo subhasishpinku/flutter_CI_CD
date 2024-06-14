@@ -7,7 +7,7 @@ import 'package:ulearning_flutter_riverpod/features/application/provider/applica
 import 'package:ulearning_flutter_riverpod/features/application/view/widgets/widgets.dart';
 
 class Application extends ConsumerWidget {
-  const Application({Key? key}) : super(key: key);
+  const Application({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {

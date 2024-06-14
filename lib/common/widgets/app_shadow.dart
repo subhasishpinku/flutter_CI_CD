@@ -63,11 +63,10 @@ class AppBoxDecorationImage extends StatelessWidget {
   final String imagePath;
 
   const AppBoxDecorationImage(
-      {Key? key,
+      {super.key,
       this.width = 40,
       this.height = 40,
-      this.imagePath = ImageRes.profile})
-      : super(key: key);
+      this.imagePath = ImageRes.profile});
 
   @override
   Widget build(BuildContext context) {

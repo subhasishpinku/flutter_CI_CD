@@ -9,7 +9,7 @@ import '../controller/home_controller.dart';
 
 
 class Home extends ConsumerStatefulWidget {
-  const Home({Key? key}) : super(key: key);
+  const Home({super.key});
 
   @override
   ConsumerState<Home> createState() => _HomeState();
@@ -23,7 +23,6 @@ class _HomeState extends ConsumerState<Home> {
   void didChangeDependencies() {
     _controller = PageController(initialPage: ref.watch(homeScreenBannerDotsProvider));
 
-    // TODO: implement didChangeDependencies
     super.didChangeDependencies();
   }
 
