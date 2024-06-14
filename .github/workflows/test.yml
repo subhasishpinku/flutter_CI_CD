@@ -60,7 +60,7 @@ jobs:
           git config --global user.email 'pinku.subhasish@gmail.com'
           git add .
           git commit -m "Build APK for release"
-          git push https://github.com/subhasishpinku/flutter_CI_CD.git HEAD:master
+          git push https://github.com/subhasishpinku/flutter_CI_CD.git HEAD:main
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Push to Releases
