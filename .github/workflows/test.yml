@@ -62,10 +62,10 @@ jobs:
           git commit -m "Build APK for release"
           git push https://github.com/subhasishpinku/flutter_CI_CD.git HEAD:main
         env:
-          GITHUB_TOKEN: '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'
+          GITHUB_TOKEN:  ${{ secrets.MY_TOKEN }}
       - name: Push to Releases
         uses: ncipollo/release-action@v1
         with:
           artifacts: 'build/app/outputs/apk/debug/*'
           tag: v1.0.${{ github.run_number }}
-          token: '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'
+          token:  ${{ secrets.MY_TOKEN }}
