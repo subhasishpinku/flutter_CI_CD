@@ -17,6 +17,7 @@ class HomeScreenBannerDots extends _$HomeScreenBannerDots{
 
 @riverpod
 class HomeUserProfile extends _$HomeUserProfile{
+  @override
   FutureOr<UserProfile> build(){
     return Global.storageService.getUserProfile();
   }
