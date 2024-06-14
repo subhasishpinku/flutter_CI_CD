@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 import 'package:ulearning_flutter_riverpod/features/sign_up/provider/register_state.dart';
 part 'register_notifier.g.dart';

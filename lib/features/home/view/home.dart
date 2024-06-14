@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import 'package:ulearning_flutter_riverpod/common/widgets/app_bar.dart';
 import 'package:ulearning_flutter_riverpod/common/widgets/search_widgets.dart';
 import 'package:ulearning_flutter_riverpod/features/home/view/widgets/home_widget.dart' ;
 

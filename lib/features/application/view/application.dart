@@ -1,9 +1,7 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:ulearning_flutter_riverpod/common/utils/app_colors.dart';
-import 'package:ulearning_flutter_riverpod/common/widgets/app_bar.dart';
 import 'package:ulearning_flutter_riverpod/common/widgets/app_shadow.dart';
 import 'package:ulearning_flutter_riverpod/features/application/provider/application_nav_notifier.dart';
 import 'package:ulearning_flutter_riverpod/features/application/view/widgets/widgets.dart';

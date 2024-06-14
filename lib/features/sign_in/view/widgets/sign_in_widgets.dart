@@ -1,9 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:ulearning_flutter_riverpod/common/utils/app_colors.dart';
-import 'package:ulearning_flutter_riverpod/common/widgets/app_shadow.dart';
-import 'package:ulearning_flutter_riverpod/common/widgets/image_widgets.dart';
-import 'package:ulearning_flutter_riverpod/common/widgets/text_widgets.dart';
 
 
 

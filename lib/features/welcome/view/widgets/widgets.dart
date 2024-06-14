@@ -1,9 +1,7 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:ulearning_flutter_riverpod/common/utils/constants.dart';
 import 'package:ulearning_flutter_riverpod/common/widgets/app_shadow.dart';
-import 'package:ulearning_flutter_riverpod/features/sign_in/view/sign_in.dart';
 
 import '../../../../common/widgets/text_widgets.dart';
 import '../../../../global.dart';
