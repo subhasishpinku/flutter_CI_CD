@@ -5,7 +5,9 @@ on:
     branches:
       - master
   workflow_dispatch:
-
+permissions:
+      contents: read
+      issues: write
 jobs:
   flutter_test:
     name: Flutter Test
