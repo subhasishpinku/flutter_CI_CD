@@ -59,7 +59,7 @@ jobs:
           git config --global user.name 'subhasishpinku'
           git config --global user.email 'pinku.subhasish@gmail.com'
           git add .
-          git commit -m "Build APK for release"
+          git commit -m "Build APK for release1"
           git push https://subhasishpinku:${{ secrets.MY_TOKEN }}@github.com/subhasishpinku/flutter_CI_CD.git HEAD:main
         env:
           GITHUB_TOKEN:  ${{ secrets.MY_TOKEN }}
