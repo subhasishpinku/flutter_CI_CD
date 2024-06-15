@@ -3,7 +3,7 @@ name: Flutter Test and Release
 on:
   push:
     branches:
-      - HEAD:main
+      - main
   workflow_dispatch:
 
 jobs:
@@ -29,7 +29,6 @@ jobs:
       - name: Run analyze
         run: flutter analyze
      
-
   build_appbundle:
     name: Flutter Release
     runs-on: macos-latest
@@ -59,17 +58,21 @@ jobs:
           git config --global user.name 'subhasishpinku'
           git config --global user.email 'pinku.subhasish@gmail.com'
       - name: Pull latest changes
-        run: git pull origin main
+        run: git pull origin main --rebase
       - name: Push changes
         run: |
-          git add .
-          git commit -m "Build APK for releases"
-          git push https://subhasishpinku:${{ secrets.MY_TOKEN }}@github.com/subhasishpinku/flutter_CI_CD.git HEAD:main
+          if ! git diff-index --quiet HEAD; then
+            git add .
+            git commit -m "Build APK for release"
+            git push https://subhasishpinku:${{ secrets.MY_TOKEN }}@github.com/subhasishpinku/flutter_CI_CD.git HEAD:main
+          else
+            echo "No changes to commit"
+          fi
         env:
-          GITHUB_TOKEN:  ${{ secrets.MY_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.MY_TOKEN }}
       - name: Push to Releases
         uses: ncipollo/release-action@v1
         with:
           artifacts: 'build/app/outputs/apk/debug/*'
           tag: v1.0.${{ github.run_number }}
-          token:  ${{ secrets.MY_TOKEN }}
+          token: ${{ secrets.MY_TOKEN }}
