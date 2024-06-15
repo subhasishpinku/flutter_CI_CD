@@ -54,12 +54,16 @@ jobs:
         run: flutter clean
       - name: Build APK
         run: flutter build apk --debug --split-per-abi
-      - name: Push changes
+      - name: Configure Git
         run: |
           git config --global user.name 'subhasishpinku'
           git config --global user.email 'pinku.subhasish@gmail.com'
+      - name: Pull latest changes
+        run: git pull origin main
+      - name: Push changes
+        run: |
           git add .
-          git commit -m "Build APK for release"
+          git commit -m "Build APK for releases"
           git push https://subhasishpinku:${{ secrets.MY_TOKEN }}@github.com/subhasishpinku/flutter_CI_CD.git HEAD:main
         env:
           GITHUB_TOKEN:  ${{ secrets.MY_TOKEN }}
