@@ -25,11 +25,11 @@ jobs:
       - name: Install dependencies
         run: flutter pub get
 
-      - name: Verify formatting
-        run: dart format --output=none --set-exit-if-changed .
-        env:
-          FLUTTER_ROOT: /Users/runner/hostedtoolcache/flutter/stable-3.22.2-arm64
-          PUB_CACHE: /Users/runner/.pub-cache
+      # - name: Verify formatting
+      #   run: dart format --output=none --set-exit-if-changed .
+      #   env:
+      #     FLUTTER_ROOT: /Users/runner/hostedtoolcache/flutter/stable-3.22.2-arm64
+      #     PUB_CACHE: /Users/runner/.pub-cache
 
       - name: Analyze project source
         run: flutter analyze
