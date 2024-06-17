@@ -36,6 +36,9 @@ jobs:
            # Verifies if the dart code is formatted well
       - name: Verify formatting
         run: dart format --output=none --set-exit-if-changed .
+        env:
+        FLUTTER_ROOT: /Users/runner/hostedtoolcache/flutter/stable-3.22.2-arm64
+        PUB_CACHE: /Users/runner/.pub-cache
         # --set-exit-if-changed stops execution if the any code is not well formatted
         # --output=none prints files which needs to be formatted
       
