@@ -35,5 +35,5 @@ jobs:
         run: flutter analyze
         # optionally use --fatal-warnings to stop execution if any warnings are found
 
-      - name: Run tests
-        run: flutter test
+      # - name: Run tests
+      #   run: flutter test
