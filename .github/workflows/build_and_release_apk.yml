@@ -37,20 +37,6 @@ jobs:
           name: release-apk
           path: build/app/outputs/flutter-apk/app-release.apk
 
-      - name: Configure Git
-        run: |
-          git config --global user.name 'subhasishpinku'
-          git config --global user.email 'pinku.subhasish@gmail.com'
-
-      - name: Commit APK changes
-        run: |
-          git add .
-          git commit -m "Build APK for release"
-      
-      - name: Push changes
-        run: |
-          git push origin main
-
       - name: Create Release
         id: create_release
         uses: actions/create-release@v1
