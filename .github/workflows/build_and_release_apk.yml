@@ -45,7 +45,7 @@ jobs:
       - name: Commit APK changes
         run: |
           git add .
-          git commit -m "Build APK for releases"
+          git commit -m "Build APK for release"
       
       - name: Push changes
         run: |
